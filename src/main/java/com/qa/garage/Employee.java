@@ -1,6 +1,8 @@
 package com.qa.garage;
 
-public class Employee {
+import com.qa.garage.vehicle.Billable;
+
+public class Employee implements Billable{
 
 	private String name;
 	private int age;
@@ -39,6 +41,11 @@ public class Employee {
 
 	public void setSpecialism(String specialism) {
 		this.specialism = specialism;
+	}
+
+	@Override
+	public int calcBill() {
+		return 100;
 	}
 
 }

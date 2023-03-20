@@ -1,6 +1,6 @@
 package com.qa.garage.vehicle;
 
-public abstract class Vehicle {
+public abstract class Vehicle implements Billable{
 
 	private int numWheels;
 
