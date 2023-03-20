@@ -27,7 +27,9 @@ public abstract class Vehicle implements Billable{
 		//this.idFinal = idFinal;
 	}
 
-	public abstract int calcBill();
+	public int calcBill() {
+		return 20;
+	}
 
 	public int getId() {
 		return this.id;
