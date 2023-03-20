@@ -7,11 +7,24 @@ public abstract class Vehicle {
 	private String colour;
 
 	private int id;
+	public static int count;
+	private int idFinal;
+
+	public int getIdFinal() {
+		return idFinal;
+	}
+
+	public void setIdFinal(int idFinal) {
+		this.idFinal = idFinal;
+	}
 
 	public Vehicle(int numWheels, String colour) {
 		super();
 		this.numWheels = numWheels;
 		this.colour = colour;
+		count++;
+		this.idFinal = count;
+		//this.idFinal = idFinal;
 	}
 
 	public abstract int calcBill();
@@ -42,7 +55,7 @@ public abstract class Vehicle {
 
 	@Override
 	public String toString() {
-		return "Vehicle [numWheels=" + this.numWheels + ", colour=" + this.colour + "]";
+		return "Vehicle [numWheels=" + this.numWheels + ", colour=" + this.colour + ", id=" + this.idFinal + "]";
 	}
 
 }
